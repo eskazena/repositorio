@@ -1,0 +1,246 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: 'Oswald',sans-serif;
+	font-weight: 400;
+	min-width: 320px;
+}
+header{
+	position: fixed;
+	z-index: 1;
+	padding: 20px;
+}
+h1{
+	font-weight: 400;
+	background-color: rgba(255, 255, 255, .7);
+	padding: 0 10px;
+	color:#ef4135;
+}
+h1 span{
+	color:#0050a4;
+}
+.biografia{
+	text-transform:lowercase;
+	color:#333;
+}
+.biografia::after{
+	content: " +";
+}
+nav ul{
+	list-style: none;
+	display:flex;
+}
+nav li{
+	flex-grow: 1;
+}
+nav a{
+	display:block;
+	height: 100vh;
+	background: url("../img/blanco.jpg") no-repeat center;
+	background-size: cover;
+	color:white;
+	text-decoration: none;
+	text-transform: lowercase;
+	font-size: 8em;
+	font-weight: 500;
+	position: relative;
+}
+nav span{
+	position: absolute;
+	right: 40px;
+	bottom:40px;
+}
+nav li:first-child a{
+	background-image: url("../img/azul.jpg");
+	color:#0050a4;
+}
+nav li:last-child a{
+	background-image: url("../img/rojo.jpg");
+	color:#ef4135;
+}
+
+/*páginas secundarias*/
+
+.section{
+	background-image: linear-gradient(to top, #999,#eee);
+	min-height: 100vh;
+}
+.section header{
+	position: static;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.section h1 a{
+	color:#ef4135;
+	text-decoration: none;
+}
+.section nav{
+	width: 400px;
+}
+.section nav li a{
+	display:inline;
+	background-image: none;
+	font-size: 1em;
+	color:#333;
+}
+.section nav li:last-child a::after{
+	content: " +";
+}
+.contenedor{
+	width: 500px;
+	margin:0 auto;
+	padding-bottom: 100px;
+}
+.contenedor h2{
+	font-weight: 500;
+	font-size: 11em;
+	position: relative;
+	top:110px;
+	left:-100px;
+	color:white;
+}
+.contenedor p{
+	margin-top: 15px;
+	position: relative;
+	z-index: 1;
+}
+.contenedor img{
+	display: block;
+	border:1px solid #333;
+	background-color: white;
+	padding: 10px;
+	width: calc(100% - 22px);
+	margin-top: 15px;
+
+}
+.azul{
+	background-image: linear-gradient(to top,#003670,#0050a4);
+	color:#eee;
+}
+.rojo{
+	background-image: linear-gradient(to top,#bd332a,#ff4135);
+	color:#eee;
+}
+.azul h2{
+	color:#003670;
+}
+.rojo h2{
+	color:#bd332a;
+}
+.azul nav li a,
+.rojo nav li a{
+	color:#eee;
+}
+
+@media screen and (max-width:1200px){
+	nav a{
+		font-size: 6em;
+	}
+}
+@media screen and (max-width:1024px){
+	nav ul{
+		display:block;
+	}
+	nav a{
+		height: calc(100vh / 3);
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+	}
+	nav li:first-child a{
+		background-position: center -145px;
+	}
+	nav li:last-child a{
+		background-position: center -235px;
+	}
+	.section nav ul{
+		display:flex;
+	}
+	.section nav a{
+		text-shadow: none;
+	}
+	
+}
+@media screen and (max-width:850px){
+	nav span{
+		bottom:20px;
+	}
+	nav li:first-child a{
+		background-position: center -110px;
+	}
+	nav li:last-child a{
+		background-position: center -205px;
+	}
+	.section header{
+		display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    flex-direction: column;
+	}
+	.section h1{
+		display: inline-block;
+	}
+	.section nav{
+		margin-top: 20px;
+		text-align: center;
+	}
+	.contenedor{
+		width: 80%;
+	}
+	.contenedor h2{
+		font-size: 6em;
+		left: -30px;
+    	top: 70px;
+	}
+
+	
+@media screen and (max-width:500px){
+	.biografia{
+		display:none;
+	}
+	h1{
+		font-size: 1.5em;
+	}
+	nav a{
+		font-size: 4.5em;
+	}
+	nav li:first-child a{
+		background-position: center -10px;
+	}
+	nav li:last-child a{
+		background-position: center -50px;
+	}
+	nav a{
+		background-position: center -175px;
+	}
+	nav span{
+		right:30px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
